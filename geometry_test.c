@@ -145,6 +145,21 @@ START_TEST(test_2d_midpoint)
 }
 END_TEST
 
+/*Lab 12: area test */
+START_TEST(test_2d_tri_area){
+	a.x = b.x = c.x = 0;
+    a.y = b.y = c.x = 0;
+    ck_assert(coord_2d_dist(&a, &b) == 0.0);
+
+    a.x = 0;
+    a.y = 0;
+    b.x = 0;
+    b.y = 10;
+    c.x = 10;
+    c.y = 0;
+    ck_assert(coord_2d_dist(&a, &b, &c) == 50.0);
+}
+
 /* coord_2d Test Suite */
 Suite* coord_2d_suite(void)
 {
