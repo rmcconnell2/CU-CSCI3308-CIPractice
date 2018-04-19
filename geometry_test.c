@@ -164,6 +164,7 @@ START_TEST(test_2d_area_triangle){
     c.y = 0;
     ck_assert(coord_2d_area_triangle(&a, &b, &c) == 50.0);
 }
+END_TEST
 
 /* coord_2d Test Suite */
 Suite* coord_2d_suite(void)
@@ -207,5 +208,4 @@ int main(void){
     srunner_free(sr);
 
     return (failed ? EXIT_FAILURE : EXIT_SUCCESS);
-
 }
